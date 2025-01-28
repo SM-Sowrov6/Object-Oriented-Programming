@@ -1,0 +1,113 @@
+//Find odd even avg sum from an array.
+public class EvenOdd {
+
+    public static void main(String[] args) {
+    
+    int[] a ={5,7,8,11,17,40};
+    
+    int sum=0, even=0,odd=0;
+    
+    for(int num:a){
+    
+    sum+=num;
+    if(num%2==0){
+    
+    even++;
+    }
+    else{
+    
+    odd++;
+    }
+}
+    double avg=sum/a.length;
+    
+    System.out.println("Sum = " + sum);
+    
+    System.out.println("Avg = " + avg);
+    
+    System.out.println("Even = " +even);
+    
+    System.out.println("Odd = " + odd);
+}
+}
+
+//Sum 1 to 100.
+
+public class sum {
+    public static void main(String[] args) {
+        int sum=0;
+        for(int i=1;i<=100;i++){
+            sum+=i;
+        }
+        System.out.println("Sum of 1 to 100 : " + sum);
+}
+}
+
+
+//Multiple of 25
+
+public class mult {
+    public static void main(String[] args) {
+        int mult=1;
+        for(int i=1;i<=10;i++){
+            mult=25*i;
+            System.out.println("Multiple of 25 : " + mult);
+        }
+        
+}
+}
+
+
+//prime or not
+
+public class isprime {
+
+    public static void main(String[] args) {
+  
+      int num = 31;
+      boolean flag = false;
+  
+      // 0 and 1 are not prime numbers
+      if (num == 0 || num == 1) {
+          flag = true;
+      }
+  
+      for (int i = 2; i <= num / 2; ++i) {
+  
+        // condition for nonprime number
+        if (num % i == 0) {
+          flag = true;
+          break;
+        }
+      }
+  
+      if (!flag)
+        System.out.println(num + " is a prime number.");
+      else
+        System.out.println(num + " is not a prime number.");
+    }
+  }
+
+
+//find the largest number of the variable
+
+public class largest {
+            public static void main(String[] args) {
+            
+            int a=7,b=11,c=2;
+            
+            if(a>b && a>c){
+            
+            System.out.println("large: " + a);
+            }
+            else if(b>a && b>c){
+                System.out.println("large: " + b);
+            } 
+           
+            
+            else{
+            
+             System.out.println("large: " + c);
+            }
+    }
+}
