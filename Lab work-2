@@ -1,0 +1,90 @@
+Find the radius and circumference of a circle
+
+import java.net.SocketOption;
+import java.util.*;
+public class Circle
+{
+    double r;
+
+    public static void main(String[] args) {
+        Circle c= new Circle();
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Radius: ");
+        c.r=sc.nextDouble();
+
+        double area=3.1416*c.r*c.r;
+        System.out.println("Area= "+area);
+        double circumference=3.1416*c.r*2;
+        System.out.println("circumference= "+circumference);
+    }
+}
+
+
+
+User input-fname ,lname,age
+
+import java.util.*;
+public class Name {
+    String fname;
+    String lname;
+    int age;
+
+    void insertData(String a, String b, int c) {
+        fname = a;
+        lname = b;
+        age = c;
+    }
+
+    void display() {
+        System.out.print(fname + " " + lname + " " + age + " ");
+    }
+
+    public static void main(String[] args) {
+        Name p1 = new Name();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter fname:");
+        p1.fname = sc.nextLine();
+
+        System.out.println("Enter lname:");
+        p1.lname = sc.nextLine();
+
+        System.out.println("Enter age:");
+        p1.age = sc.nextInt();
+
+        p1.display();
+        p1.insertData(p1.fname, p1.lname, p1.age);
+    }
+}
+
+
+
+User Input Salary
+
+import java.util.*;
+public class Salary {
+  String name;
+  String jobtitle;
+  int salary;
+
+    public static void main(String[] args) {
+        Salary p1=new Salary();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter name:");
+        p1.name=sc.nextLine();
+
+        System.out.println("Enter jobtitle");
+        p1.jobtitle=sc.nextLine();
+
+        System.out.println("Enter salary");
+        p1.salary=sc.nextInt();
+
+        int newsalary=p1.salary+5000;
+        System.out.println("Increment Salary:"+newsalary);
+
+        int year=12*p1.salary;
+        System.out.println("Yearly Salary:"+year);
+
+
+    }
+}
