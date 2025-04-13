@@ -1,0 +1,81 @@
+//Main Class
+
+
+public class Main {
+    public static void main(String[] args) {
+        String[] bookTitles = {"The Alchemist", "1984", "Java Programming","ieu"};
+        Library library = new Library(bookTitles);
+        System.out.println("Library Books:");
+        library.showBooks();
+
+        Member member = new Member("Alice");
+        LibrarySystem system = new LibrarySystem(member);
+        system.showMember();
+    }
+
+}
+
+
+//book class
+
+public class Book {
+    private String title;
+
+    Book(String title) {
+        this.title = title;
+    }
+
+    void displayBook() {
+        System.out.println("Book: " + title);
+    }
+}
+
+//Library class
+
+
+public class Library {
+    private Book[] books;
+
+    Library(String[] bookTitles) {
+        this.books = new Book[bookTitles.length];
+        for (int i = 0; i < bookTitles.length; i++) {
+            books[i] = new Book(bookTitles[i]);
+        }
+    }
+
+    void showBooks() {
+        for (Book book : books) {
+            book.displayBook();
+        }
+    }
+}
+
+
+
+//Member class 
+
+
+public class Member {
+    String name;
+
+    Member(String name) {
+        this.name = name;
+    }
+}
+
+
+//LibrarySystem class 
+
+
+public class LibrarySystem {
+    private Member member;
+
+    LibrarySystem(Member member) {
+        this.member = member;
+    }
+
+    void showMember() {
+        System.out.println("Library Member: " + member.name);
+    }
+
+}
