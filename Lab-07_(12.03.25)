@@ -1,0 +1,46 @@
+//Main Class
+
+public class Main {
+    public static void main(String[] args) {
+
+        Rectangle obj =new Rectangle();
+        obj.length= 4.5F;
+        obj.width=5.0F;
+        obj.color= "Red";
+        System.out.println("Area of Rectangle ="+obj.getArea());
+        System.out.println("Color: "+obj.toString());
+    }
+}
+
+//Shape Class
+
+public abstract class Shape {
+    String color;
+    public abstract float getArea();
+    public String toString()
+    {
+        return this.color;
+    }
+}
+
+//Rectangle Class
+
+public class Rectangle extends Shape{
+    public float length;
+    public float width;
+    public float getArea()
+    {
+        return length*width;
+    }
+}
+
+//Triangle Class
+
+public class Triangle extends Shape{
+    int base;
+    int height;
+    public float getArea()
+    {
+        return (float) (0.5*base*height);
+    }
+}
