@@ -1,0 +1,38 @@
+//Main class 
+
+public class Main {
+    public static void main(String[] args) {
+        BankAccount b= new CheckAccount();
+
+        System.out.println(b.account_num);
+        b.gateBalance();
+        System.out.println(b.deposite());
+        System.out.println(b.withdraw());
+    }
+}
+
+
+//BankAccount class
+
+public abstract class BankAccount {
+    int account_num=6987654;
+    double balance=1000.00;
+    abstract double withdraw();
+    abstract double deposite();
+    void gateBalance() {
+        System.out.println(balance);
+
+    }
+}
+
+
+//CheckAccount class
+
+class CheckAccount extends BankAccount{
+    double withdraw(){
+        return balance-200.00;
+    }
+    double deposite(){
+        return 300.00;
+    }
+}
