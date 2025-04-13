@@ -1,0 +1,127 @@
+//Main Class
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter name :");
+        String name= sc.nextLine();
+
+        System.out.print("Enter Age :");
+        int age= sc.nextInt();
+
+        System.out.print("Enter Id :");
+       int id= sc.nextInt();
+
+        Person person=new Person(name,age);
+
+        System.out.println(person.getName());
+        System.out.println(person.getAge());
+        System.out.println();
+    }
+}
+
+
+
+//Person Class 
+
+public class Person {
+    private String name;
+    private int age;
+    public int id;
+
+    public Person(){
+        System.out.println("Default constructor");
+    }
+
+    public Person(String name,int age){
+        this.name=name;
+        this.age=age;
+    }
+    public String getName() {
+        return this.name;
+    }
+    public int getAge(){
+        return this.age;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+
+//Employee class
+
+
+
+public class Employee {
+    public int id=55;
+    public String name="Sowrov";
+    public String Joinning_date="23-jan";
+
+}
+class SoftwareEngineer extends Employee{
+    public double salary=100;
+
+
+}
+class HR extends Employee{
+
+    public double salary=100;
+
+}
+
+
+//Vehicle class
+
+public class Vehicle {
+    protected String brand = "ford";
+
+}
+class Car extends Vehicle{
+    private final String modelName= "Lambo";
+
+    public static void main(String[] args) {
+        Car mycar= new Car();
+
+
+        System.out.println(mycar.brand);
+        System.out.println(mycar.modelName);
+    }
+}
+
+
+
+//Main1 class 
+
+
+public class Main1 {
+    public static void main(String[] args) {
+        SoftwareEngineer soft=new SoftwareEngineer();
+        HR hr=new HR();
+        Employee employee=new Employee();
+
+        System.out.println(employee.id + "," + employee.name + ","+employee.Joinning_date);
+
+        System.out.println("HR id : " +hr.id);
+        System.out.println("HR name : " +hr.name);
+        System.out.println("HR joining date : " +hr.Joinning_date);
+        System.out.println("HR salary : " +hr.salary);
+
+        System.out.println("Software_eng id : " +soft.id);
+        System.out.println("Software_eng name : " +soft.name);
+        System.out.println("Software_eng Joiningdate : " +soft.Joinning_date);
+        System.out.println("Software_eng salary : " +soft.salary);
+
+
+
+
+    }
+}
